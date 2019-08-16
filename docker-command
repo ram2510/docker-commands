@@ -1,0 +1,17 @@
+docker commands
+
+docker create <image name> - create a container from the image it ouputs the container id
+
+docker start <id> - run the container with the given id but it will not display output
+
+docker start -a <id> - here run the container and show the output a stands for attach
+
+docker run <image name> = docker create + docker start -a <id>
+
+docker ps - show all the running docker containers
+
+docker ps --all - show all the container ever created on the system
+
+docker system prune - deletes all the docker cache like history build cache etc
+
+docker logs <id> - logs the output of the container of which the id is supplied
