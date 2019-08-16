@@ -15,3 +15,11 @@ docker ps --all - show all the container ever created on the system
 docker system prune - deletes all the docker cache like history build cache etc
 
 docker logs <id> - logs the output of the container of which the id is supplied
+
+docker stop <id> - stop a running container the signal is sigterm
+
+docker kill <id> - same function but it will forcefully stops the process the signal is sigkill (when the stop command does not work and the container does not stop it will fallback to kill)
+
+docker exec -it <id> <command name> - this will let us execute commands in the container with the given id 
+
+docker exec -it <id> - this command will give us terminal access in the container with the id
