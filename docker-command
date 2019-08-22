@@ -23,3 +23,20 @@ docker kill <id> - same function but it will forcefully stops the process the si
 docker exec -it <id> <command name> - this will let us execute commands in the container with the given id 
 
 docker exec -it <id> - this command will give us terminal access in the container with the id
+
+How to build a dockerfile
+
+A dockerfile consists of instrution (e=g RUN,FROM,CMD) and argument (alpine,["redis-server"])
+
+So we write instructions here eg of a docker file (see the dockerfile file in this directory)
+
+Writing a docker file == being given a computer with no OS and being told to install chrome
+
+So the first part is to just install the OS in the container 
+
+docker build . - this commands gives everything(since .) to the docker server to build an image from the dockerfile
+
+docker build -t ram2510/<name>:latest . - This will tag the image with the name ram2510/<tag> so now we can run the image with this tag
+
+docker commit -c "<Comand>" <id-of-image> - This will commit the command or attach the command with the id specified and give an ew image with id so now we can use this
+
