@@ -40,3 +40,10 @@ docker build -t ram2510/<name>:latest . - This will tag the image with the name 
 
 docker commit -c "<Comand>" <id-of-image> - This will commit the command or attach the command with the id specified and give an ew image with id so now we can use this
 
+port mapping - docker cannot contact the browser directly so we need to setupthe route which will route our request from the browser port to the container port 
+docker -p 8080:8080 <image id>
+
+the first port is the browser port port with which we will interact and the next pot is for the conatainer 
+
+
+
